@@ -1,0 +1,548 @@
+TransformerModel(
+  (conv_in): Sequential(
+    (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (1): ReLU()
+    (2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+    (3): ReLU()
+  )
+  (conv_out): Sequential(
+    (0): Linear(in_features=640, out_features=360, bias=True)
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (encoder_layer): MultiSequential(
+    (0): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (1): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (2): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (3): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (4): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (5): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (6): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (7): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (8): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+    (9): EncoderLayer(
+      (self_attn): MultiHeadedAttention(
+        (linear_q): Linear(in_features=360, out_features=360, bias=True)
+        (linear_k): Linear(in_features=360, out_features=360, bias=True)
+        (linear_v): Linear(in_features=360, out_features=360, bias=True)
+        (linear_out): Linear(in_features=360, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (feed_forward): PositionwiseFeedForward(
+        (w_1): Linear(in_features=360, out_features=1024, bias=True)
+        (w_2): Linear(in_features=1024, out_features=360, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (activation): ReLU()
+      )
+      (norm1): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (norm2): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+      (concat_linear): Sequential()
+    )
+  )
+  (after_norm): LayerNorm((360,), eps=1e-12, elementwise_affine=True)
+  (final_layer): Linear(in_features=360, out_features=29, bias=True)
+)
+Num Model Parameters 12850957
+Wed May  5 11:30:07 UTC 2021
+Train Epoch: 1 [0/28539 (0%)]	Loss: 4.996496	LR: 0.000040
+Train Epoch: 1 [1000/28539 (4%)]	Loss: 2.851352	LR: 0.000051
+Train Epoch: 1 [2000/28539 (7%)]	Loss: 2.906349	LR: 0.000063
+Train Epoch: 1 [3000/28539 (11%)]	Loss: 2.815370	LR: 0.000074
+Train Epoch: 1 [4000/28539 (14%)]	Loss: 2.889297	LR: 0.000085
+Train Epoch: 1 [5000/28539 (18%)]	Loss: 2.769768	LR: 0.000096
+Train Epoch: 1 [6000/28539 (21%)]	Loss: 2.704027	LR: 0.000107
+Train Epoch: 1 [7000/28539 (25%)]	Loss: 2.654554	LR: 0.000119
+Train Epoch: 1 [8000/28539 (28%)]	Loss: 2.663080	LR: 0.000130
+Train Epoch: 1 [9000/28539 (32%)]	Loss: 2.645488	LR: 0.000141
+Train Epoch: 1 [10000/28539 (35%)]	Loss: 2.625027	LR: 0.000152
+Train Epoch: 1 [11000/28539 (39%)]	Loss: 2.648683	LR: 0.000163
+Train Epoch: 1 [12000/28539 (42%)]	Loss: 2.568531	LR: 0.000175
+Train Epoch: 1 [13000/28539 (46%)]	Loss: 2.567956	LR: 0.000186
+Train Epoch: 1 [14000/28539 (49%)]	Loss: 2.577781	LR: 0.000197
+Train Epoch: 1 [15000/28539 (53%)]	Loss: 2.576136	LR: 0.000208
+Train Epoch: 1 [16000/28539 (56%)]	Loss: 2.562080	LR: 0.000220
+Train Epoch: 1 [17000/28539 (60%)]	Loss: 2.485294	LR: 0.000231
+Train Epoch: 1 [18000/28539 (63%)]	Loss: 2.395262	LR: 0.000242
+Train Epoch: 1 [19000/28539 (67%)]	Loss: 2.392029	LR: 0.000253
+Train Epoch: 1 [20000/28539 (70%)]	Loss: 2.325799	LR: 0.000264
+Train Epoch: 1 [21000/28539 (74%)]	Loss: 2.448832	LR: 0.000276
+Train Epoch: 1 [22000/28539 (77%)]	Loss: 2.305145	LR: 0.000287
+Train Epoch: 1 [23000/28539 (81%)]	Loss: 2.294734	LR: 0.000298
+Train Epoch: 1 [24000/28539 (84%)]	Loss: 2.241240	LR: 0.000309
+Train Epoch: 1 [25000/28539 (88%)]	Loss: 2.292268	LR: 0.000320
+Train Epoch: 1 [26000/28539 (91%)]	Loss: 2.258134	LR: 0.000332
+Train Epoch: 1 [27000/28539 (95%)]	Loss: 2.456698	LR: 0.000343
+Train Epoch: 1 [28000/28539 (98%)]	Loss: 2.207639	LR: 0.000354
+
+evaluating...
+Test set: Average loss: 2.1714, Average CER: 0.554633 Average WER: 1.1564
+
+Wed May  5 11:47:09 UTC 2021
+Train Epoch: 2 [0/28539 (0%)]	Loss: 2.274730	LR: 0.000360
+Train Epoch: 2 [1000/28539 (4%)]	Loss: 2.288277	LR: 0.000371
+Train Epoch: 2 [2000/28539 (7%)]	Loss: 2.276960	LR: 0.000383
+Train Epoch: 2 [3000/28539 (11%)]	Loss: 2.129472	LR: 0.000394
+Train Epoch: 2 [4000/28539 (14%)]	Loss: 2.163713	LR: 0.000405
+Train Epoch: 2 [5000/28539 (18%)]	Loss: 2.218781	LR: 0.000416
+Train Epoch: 2 [6000/28539 (21%)]	Loss: 2.195732	LR: 0.000427
+Train Epoch: 2 [7000/28539 (25%)]	Loss: 2.140280	LR: 0.000439
+Train Epoch: 2 [8000/28539 (28%)]	Loss: 2.237743	LR: 0.000450
+Train Epoch: 2 [9000/28539 (32%)]	Loss: 2.095417	LR: 0.000461
+Train Epoch: 2 [10000/28539 (35%)]	Loss: 2.110990	LR: 0.000472
+Train Epoch: 2 [11000/28539 (39%)]	Loss: 2.135609	LR: 0.000483
+Train Epoch: 2 [12000/28539 (42%)]	Loss: 2.102544	LR: 0.000495
+Train Epoch: 2 [13000/28539 (46%)]	Loss: 2.171911	LR: 0.000506
+Train Epoch: 2 [14000/28539 (49%)]	Loss: 2.201321	LR: 0.000517
+Train Epoch: 2 [15000/28539 (53%)]	Loss: 2.199604	LR: 0.000528
+Train Epoch: 2 [16000/28539 (56%)]	Loss: 2.218766	LR: 0.000540
+Train Epoch: 2 [17000/28539 (60%)]	Loss: 2.047033	LR: 0.000551
+Train Epoch: 2 [18000/28539 (63%)]	Loss: 2.117973	LR: 0.000562
+Train Epoch: 2 [19000/28539 (67%)]	Loss: 2.022618	LR: 0.000573
+Train Epoch: 2 [20000/28539 (70%)]	Loss: 2.210528	LR: 0.000584
+Train Epoch: 2 [21000/28539 (74%)]	Loss: 2.072077	LR: 0.000596
+Train Epoch: 2 [22000/28539 (77%)]	Loss: 2.107623	LR: 0.000607
+Train Epoch: 2 [23000/28539 (81%)]	Loss: 2.163242	LR: 0.000618
+Train Epoch: 2 [24000/28539 (84%)]	Loss: 1.908067	LR: 0.000629
+Train Epoch: 2 [25000/28539 (88%)]	Loss: 1.948532	LR: 0.000640
+Train Epoch: 2 [26000/28539 (91%)]	Loss: 2.135079	LR: 0.000652
+Train Epoch: 2 [27000/28539 (95%)]	Loss: 1.997738	LR: 0.000663
+Train Epoch: 2 [28000/28539 (98%)]	Loss: 1.910671	LR: 0.000674
+
+evaluating...
+Test set: Average loss: 1.8655, Average CER: 0.481515 Average WER: 0.9996
+
+Wed May  5 12:03:59 UTC 2021
+Train Epoch: 3 [0/28539 (0%)]	Loss: 2.042964	LR: 0.000680
+Train Epoch: 3 [1000/28539 (4%)]	Loss: 1.969672	LR: 0.000691
+Train Epoch: 3 [2000/28539 (7%)]	Loss: 2.067397	LR: 0.000703
+Train Epoch: 3 [3000/28539 (11%)]	Loss: 1.901615	LR: 0.000714
+Train Epoch: 3 [4000/28539 (14%)]	Loss: 2.037263	LR: 0.000725
+Train Epoch: 3 [5000/28539 (18%)]	Loss: 1.913521	LR: 0.000736
+Train Epoch: 3 [6000/28539 (21%)]	Loss: 1.867764	LR: 0.000747
+Train Epoch: 3 [7000/28539 (25%)]	Loss: 1.910297	LR: 0.000759
+Train Epoch: 3 [8000/28539 (28%)]	Loss: 1.988922	LR: 0.000770
+Train Epoch: 3 [9000/28539 (32%)]	Loss: 1.797307	LR: 0.000781
+Train Epoch: 3 [10000/28539 (35%)]	Loss: 1.859909	LR: 0.000792
+Train Epoch: 3 [11000/28539 (39%)]	Loss: 1.933576	LR: 0.000804
+Train Epoch: 3 [12000/28539 (42%)]	Loss: 2.247467	LR: 0.000815
+Train Epoch: 3 [13000/28539 (46%)]	Loss: 2.068092	LR: 0.000826
+Train Epoch: 3 [14000/28539 (49%)]	Loss: 1.805059	LR: 0.000837
+Train Epoch: 3 [15000/28539 (53%)]	Loss: 1.841895	LR: 0.000848
+Train Epoch: 3 [16000/28539 (56%)]	Loss: 1.868427	LR: 0.000860
+Train Epoch: 3 [17000/28539 (60%)]	Loss: 1.789258	LR: 0.000871
+Train Epoch: 3 [18000/28539 (63%)]	Loss: 1.830967	LR: 0.000882
+Train Epoch: 3 [19000/28539 (67%)]	Loss: 1.788152	LR: 0.000893
+Train Epoch: 3 [20000/28539 (70%)]	Loss: 1.876265	LR: 0.000904
+Train Epoch: 3 [21000/28539 (74%)]	Loss: 1.793334	LR: 0.000916
+Train Epoch: 3 [22000/28539 (77%)]	Loss: 1.808156	LR: 0.000927
+Train Epoch: 3 [23000/28539 (81%)]	Loss: 1.780485	LR: 0.000938
+Train Epoch: 3 [24000/28539 (84%)]	Loss: 1.740730	LR: 0.000949
+Train Epoch: 3 [25000/28539 (88%)]	Loss: 1.821983	LR: 0.000961
+Train Epoch: 3 [26000/28539 (91%)]	Loss: 1.654630	LR: 0.000972
+Train Epoch: 3 [27000/28539 (95%)]	Loss: 1.637239	LR: 0.000983
+Train Epoch: 3 [28000/28539 (98%)]	Loss: 1.780096	LR: 0.000994
+
+evaluating...
+Test set: Average loss: 1.4967, Average CER: 0.377793 Average WER: 0.9296
+
+Wed May  5 12:21:11 UTC 2021
+Train Epoch: 4 [0/28539 (0%)]	Loss: 1.608653	LR: 0.001000
+Train Epoch: 4 [1000/28539 (4%)]	Loss: 1.611621	LR: 0.000995
+Train Epoch: 4 [2000/28539 (7%)]	Loss: 1.653435	LR: 0.000990
+Train Epoch: 4 [3000/28539 (11%)]	Loss: 1.662942	LR: 0.000985
+Train Epoch: 4 [4000/28539 (14%)]	Loss: 1.707669	LR: 0.000980
+Train Epoch: 4 [5000/28539 (18%)]	Loss: 1.632916	LR: 0.000975
+Train Epoch: 4 [6000/28539 (21%)]	Loss: 1.646219	LR: 0.000970
+Train Epoch: 4 [7000/28539 (25%)]	Loss: 1.634371	LR: 0.000965
+Train Epoch: 4 [8000/28539 (28%)]	Loss: 1.513829	LR: 0.000960
+Train Epoch: 4 [9000/28539 (32%)]	Loss: 1.573639	LR: 0.000955
+Train Epoch: 4 [10000/28539 (35%)]	Loss: 1.450795	LR: 0.000950
+Train Epoch: 4 [11000/28539 (39%)]	Loss: 1.571665	LR: 0.000945
+Train Epoch: 4 [12000/28539 (42%)]	Loss: 1.532352	LR: 0.000940
+Train Epoch: 4 [13000/28539 (46%)]	Loss: 1.524124	LR: 0.000935
+Train Epoch: 4 [14000/28539 (49%)]	Loss: 1.381515	LR: 0.000930
+Train Epoch: 4 [15000/28539 (53%)]	Loss: 1.543065	LR: 0.000925
+Train Epoch: 4 [16000/28539 (56%)]	Loss: 1.504448	LR: 0.000920
+Train Epoch: 4 [17000/28539 (60%)]	Loss: 1.571630	LR: 0.000915
+Train Epoch: 4 [18000/28539 (63%)]	Loss: 1.617278	LR: 0.000910
+Train Epoch: 4 [19000/28539 (67%)]	Loss: 1.384175	LR: 0.000905
+Train Epoch: 4 [20000/28539 (70%)]	Loss: 1.409214	LR: 0.000900
+Train Epoch: 4 [21000/28539 (74%)]	Loss: 1.588004	LR: 0.000895
+Train Epoch: 4 [22000/28539 (77%)]	Loss: 1.481256	LR: 0.000890
+Train Epoch: 4 [23000/28539 (81%)]	Loss: 1.358356	LR: 0.000885
+Train Epoch: 4 [24000/28539 (84%)]	Loss: 1.366968	LR: 0.000880
+Train Epoch: 4 [25000/28539 (88%)]	Loss: 1.292940	LR: 0.000875
+Train Epoch: 4 [26000/28539 (91%)]	Loss: 1.393841	LR: 0.000870
+Train Epoch: 4 [27000/28539 (95%)]	Loss: 1.436325	LR: 0.000865
+Train Epoch: 4 [28000/28539 (98%)]	Loss: 1.345956	LR: 0.000860
+
+evaluating...
+Test set: Average loss: 1.1505, Average CER: 0.290330 Average WER: 0.7837
+
+Wed May  5 12:38:30 UTC 2021
+Train Epoch: 5 [0/28539 (0%)]	Loss: 1.379168	LR: 0.000857
+Train Epoch: 5 [1000/28539 (4%)]	Loss: 1.277156	LR: 0.000852
+Train Epoch: 5 [2000/28539 (7%)]	Loss: 1.257069	LR: 0.000847
+Train Epoch: 5 [3000/28539 (11%)]	Loss: 1.364056	LR: 0.000842
+Train Epoch: 5 [4000/28539 (14%)]	Loss: 1.362176	LR: 0.000837
+Train Epoch: 5 [5000/28539 (18%)]	Loss: 1.527997	LR: 0.000832
+Train Epoch: 5 [6000/28539 (21%)]	Loss: 1.337766	LR: 0.000827
+Train Epoch: 5 [7000/28539 (25%)]	Loss: 1.221696	LR: 0.000822
+Train Epoch: 5 [8000/28539 (28%)]	Loss: 1.358488	LR: 0.000817
+Train Epoch: 5 [9000/28539 (32%)]	Loss: 1.418632	LR: 0.000812
+Train Epoch: 5 [10000/28539 (35%)]	Loss: 1.509382	LR: 0.000807
+Train Epoch: 5 [11000/28539 (39%)]	Loss: 1.237294	LR: 0.000802
+Train Epoch: 5 [12000/28539 (42%)]	Loss: 1.381313	LR: 0.000797
+Train Epoch: 5 [13000/28539 (46%)]	Loss: 1.208201	LR: 0.000792
+Train Epoch: 5 [14000/28539 (49%)]	Loss: 1.462960	LR: 0.000787
+Train Epoch: 5 [15000/28539 (53%)]	Loss: 1.233649	LR: 0.000782
+Train Epoch: 5 [16000/28539 (56%)]	Loss: 1.285048	LR: 0.000777
+Train Epoch: 5 [17000/28539 (60%)]	Loss: 1.190347	LR: 0.000772
+Train Epoch: 5 [18000/28539 (63%)]	Loss: 1.335542	LR: 0.000767
+Train Epoch: 5 [19000/28539 (67%)]	Loss: 1.224070	LR: 0.000762
+Train Epoch: 5 [20000/28539 (70%)]	Loss: 1.196431	LR: 0.000757
+Train Epoch: 5 [21000/28539 (74%)]	Loss: 1.360041	LR: 0.000752
+Train Epoch: 5 [22000/28539 (77%)]	Loss: 1.140661	LR: 0.000747
+Train Epoch: 5 [23000/28539 (81%)]	Loss: 1.242738	LR: 0.000742
+Train Epoch: 5 [24000/28539 (84%)]	Loss: 1.134443	LR: 0.000737
+Train Epoch: 5 [25000/28539 (88%)]	Loss: 1.416602	LR: 0.000732
+Train Epoch: 5 [26000/28539 (91%)]	Loss: 1.258780	LR: 0.000727
+Train Epoch: 5 [27000/28539 (95%)]	Loss: 1.197428	LR: 0.000722
+Train Epoch: 5 [28000/28539 (98%)]	Loss: 1.327323	LR: 0.000717
+
+evaluating...
+Test set: Average loss: 0.9665, Average CER: 0.247265 Average WER: 0.6948
+
+Wed May  5 12:55:52 UTC 2021
+Train Epoch: 6 [0/28539 (0%)]	Loss: 1.274492	LR: 0.000714
+Train Epoch: 6 [1000/28539 (4%)]	Loss: 1.131418	LR: 0.000709
+Train Epoch: 6 [2000/28539 (7%)]	Loss: 1.164108	LR: 0.000704
+Train Epoch: 6 [3000/28539 (11%)]	Loss: 1.289772	LR: 0.000699
+Train Epoch: 6 [4000/28539 (14%)]	Loss: 1.058278	LR: 0.000694
+Train Epoch: 6 [5000/28539 (18%)]	Loss: 1.193894	LR: 0.000689
+Train Epoch: 6 [6000/28539 (21%)]	Loss: 0.990539	LR: 0.000684
+Train Epoch: 6 [7000/28539 (25%)]	Loss: 1.215900	LR: 0.000679
+Train Epoch: 6 [8000/28539 (28%)]	Loss: 1.125800	LR: 0.000674
+Train Epoch: 6 [9000/28539 (32%)]	Loss: 1.220538	LR: 0.000669
+Train Epoch: 6 [10000/28539 (35%)]	Loss: 1.085268	LR: 0.000664
+Train Epoch: 6 [11000/28539 (39%)]	Loss: 1.081931	LR: 0.000659
+Train Epoch: 6 [12000/28539 (42%)]	Loss: 1.124123	LR: 0.000654
+Train Epoch: 6 [13000/28539 (46%)]	Loss: 1.232802	LR: 0.000649
+Train Epoch: 6 [14000/28539 (49%)]	Loss: 1.351482	LR: 0.000644
+Train Epoch: 6 [15000/28539 (53%)]	Loss: 1.215285	LR: 0.000639
+Train Epoch: 6 [16000/28539 (56%)]	Loss: 1.460950	LR: 0.000634
+Train Epoch: 6 [17000/28539 (60%)]	Loss: 1.124180	LR: 0.000629
+Train Epoch: 6 [18000/28539 (63%)]	Loss: 1.157732	LR: 0.000624
+Train Epoch: 6 [19000/28539 (67%)]	Loss: 1.019928	LR: 0.000619
+Train Epoch: 6 [20000/28539 (70%)]	Loss: 1.388160	LR: 0.000614
+Train Epoch: 6 [21000/28539 (74%)]	Loss: 1.121867	LR: 0.000609
+Train Epoch: 6 [22000/28539 (77%)]	Loss: 1.316063	LR: 0.000604
+Train Epoch: 6 [23000/28539 (81%)]	Loss: 1.050785	LR: 0.000599
+Train Epoch: 6 [24000/28539 (84%)]	Loss: 1.325380	LR: 0.000594
+Train Epoch: 6 [25000/28539 (88%)]	Loss: 0.952208	LR: 0.000589
+Train Epoch: 6 [26000/28539 (91%)]	Loss: 1.113767	LR: 0.000584
+Train Epoch: 6 [27000/28539 (95%)]	Loss: 1.153415	LR: 0.000579
+Train Epoch: 6 [28000/28539 (98%)]	Loss: 1.167253	LR: 0.000574
+
+evaluating...
+Test set: Average loss: 0.8512, Average CER: 0.221530 Average WER: 0.6428
+
+Wed May  5 13:13:21 UTC 2021
+Train Epoch: 7 [0/28539 (0%)]	Loss: 1.135345	LR: 0.000571
+Train Epoch: 7 [1000/28539 (4%)]	Loss: 1.216825	LR: 0.000566
+Train Epoch: 7 [2000/28539 (7%)]	Loss: 1.174379	LR: 0.000561
+Train Epoch: 7 [3000/28539 (11%)]	Loss: 1.016116	LR: 0.000556
+Train Epoch: 7 [4000/28539 (14%)]	Loss: 1.032951	LR: 0.000551
+Train Epoch: 7 [5000/28539 (18%)]	Loss: 1.075820	LR: 0.000546
+Train Epoch: 7 [6000/28539 (21%)]	Loss: 1.016756	LR: 0.000541
+Train Epoch: 7 [7000/28539 (25%)]	Loss: 0.927416	LR: 0.000536
+Train Epoch: 7 [8000/28539 (28%)]	Loss: 1.211008	LR: 0.000531
+Train Epoch: 7 [9000/28539 (32%)]	Loss: 1.094292	LR: 0.000526
+Train Epoch: 7 [10000/28539 (35%)]	Loss: 1.158479	LR: 0.000521
+Train Epoch: 7 [11000/28539 (39%)]	Loss: 0.965784	LR: 0.000516
+Train Epoch: 7 [12000/28539 (42%)]	Loss: 1.048640	LR: 0.000511
+Train Epoch: 7 [13000/28539 (46%)]	Loss: 0.990341	LR: 0.000506
+Train Epoch: 7 [14000/28539 (49%)]	Loss: 1.164103	LR: 0.000501
+Train Epoch: 7 [15000/28539 (53%)]	Loss: 1.035271	LR: 0.000496
+Train Epoch: 7 [16000/28539 (56%)]	Loss: 1.053724	LR: 0.000491
+Train Epoch: 7 [17000/28539 (60%)]	Loss: 1.077736	LR: 0.000486
+Train Epoch: 7 [18000/28539 (63%)]	Loss: 1.033443	LR: 0.000481
+Train Epoch: 7 [19000/28539 (67%)]	Loss: 1.030082	LR: 0.000476
+Train Epoch: 7 [20000/28539 (70%)]	Loss: 1.025303	LR: 0.000471
+Train Epoch: 7 [21000/28539 (74%)]	Loss: 0.959681	LR: 0.000466
+Train Epoch: 7 [22000/28539 (77%)]	Loss: 1.137425	LR: 0.000461
+Train Epoch: 7 [23000/28539 (81%)]	Loss: 1.081121	LR: 0.000456
+Train Epoch: 7 [24000/28539 (84%)]	Loss: 0.965701	LR: 0.000451
+Train Epoch: 7 [25000/28539 (88%)]	Loss: 1.010051	LR: 0.000446
+Train Epoch: 7 [26000/28539 (91%)]	Loss: 1.047876	LR: 0.000441
+Train Epoch: 7 [27000/28539 (95%)]	Loss: 1.144516	LR: 0.000436
+Train Epoch: 7 [28000/28539 (98%)]	Loss: 0.989528	LR: 0.000431
+
+evaluating...
+Test set: Average loss: 0.7725, Average CER: 0.197173 Average WER: 0.5858
+
+Wed May  5 13:31:06 UTC 2021
+Train Epoch: 8 [0/28539 (0%)]	Loss: 0.972722	LR: 0.000428
+Train Epoch: 8 [1000/28539 (4%)]	Loss: 0.969299	LR: 0.000423
+Train Epoch: 8 [2000/28539 (7%)]	Loss: 1.082092	LR: 0.000418
+Train Epoch: 8 [3000/28539 (11%)]	Loss: 1.282130	LR: 0.000413
+Train Epoch: 8 [4000/28539 (14%)]	Loss: 0.811088	LR: 0.000408
+Train Epoch: 8 [5000/28539 (18%)]	Loss: 1.105485	LR: 0.000403
+Train Epoch: 8 [6000/28539 (21%)]	Loss: 0.904606	LR: 0.000398
+Train Epoch: 8 [7000/28539 (25%)]	Loss: 0.951967	LR: 0.000393
+Train Epoch: 8 [8000/28539 (28%)]	Loss: 0.858279	LR: 0.000388
+Train Epoch: 8 [9000/28539 (32%)]	Loss: 1.086785	LR: 0.000383
+Train Epoch: 8 [10000/28539 (35%)]	Loss: 1.289852	LR: 0.000378
+Train Epoch: 8 [11000/28539 (39%)]	Loss: 0.944944	LR: 0.000373
+Train Epoch: 8 [12000/28539 (42%)]	Loss: 1.063420	LR: 0.000368
+Train Epoch: 8 [13000/28539 (46%)]	Loss: 0.912703	LR: 0.000363
+Train Epoch: 8 [14000/28539 (49%)]	Loss: 1.109456	LR: 0.000358
+Train Epoch: 8 [15000/28539 (53%)]	Loss: 0.948167	LR: 0.000353
+Train Epoch: 8 [16000/28539 (56%)]	Loss: 1.132061	LR: 0.000348
+Train Epoch: 8 [17000/28539 (60%)]	Loss: 0.984937	LR: 0.000343
+Train Epoch: 8 [18000/28539 (63%)]	Loss: 0.984743	LR: 0.000338
+Train Epoch: 8 [19000/28539 (67%)]	Loss: 1.036264	LR: 0.000333
+Train Epoch: 8 [20000/28539 (70%)]	Loss: 0.982529	LR: 0.000328
+Train Epoch: 8 [21000/28539 (74%)]	Loss: 1.018118	LR: 0.000323
+Train Epoch: 8 [22000/28539 (77%)]	Loss: 0.965048	LR: 0.000318
+Train Epoch: 8 [23000/28539 (81%)]	Loss: 0.948880	LR: 0.000313
+Train Epoch: 8 [24000/28539 (84%)]	Loss: 0.887031	LR: 0.000308
+Train Epoch: 8 [25000/28539 (88%)]	Loss: 0.804632	LR: 0.000303
+Train Epoch: 8 [26000/28539 (91%)]	Loss: 0.896189	LR: 0.000298
+Train Epoch: 8 [27000/28539 (95%)]	Loss: 1.103048	LR: 0.000293
+Train Epoch: 8 [28000/28539 (98%)]	Loss: 0.811034	LR: 0.000288
+
+evaluating...
+Test set: Average loss: 0.6949, Average CER: 0.184294 Average WER: 0.5577
+
+Wed May  5 13:49:02 UTC 2021
+Train Epoch: 9 [0/28539 (0%)]	Loss: 1.099473	LR: 0.000286
+Train Epoch: 9 [1000/28539 (4%)]	Loss: 1.012013	LR: 0.000281
+Train Epoch: 9 [2000/28539 (7%)]	Loss: 0.852974	LR: 0.000276
+Train Epoch: 9 [3000/28539 (11%)]	Loss: 1.049084	LR: 0.000271
+Train Epoch: 9 [4000/28539 (14%)]	Loss: 1.095422	LR: 0.000266
+Train Epoch: 9 [5000/28539 (18%)]	Loss: 0.803702	LR: 0.000261
+Train Epoch: 9 [6000/28539 (21%)]	Loss: 0.866233	LR: 0.000256
+Train Epoch: 9 [7000/28539 (25%)]	Loss: 0.804704	LR: 0.000251
+Train Epoch: 9 [8000/28539 (28%)]	Loss: 0.934985	LR: 0.000246
+Train Epoch: 9 [9000/28539 (32%)]	Loss: 1.015939	LR: 0.000241
+Train Epoch: 9 [10000/28539 (35%)]	Loss: 0.928327	LR: 0.000236
+Train Epoch: 9 [11000/28539 (39%)]	Loss: 0.806508	LR: 0.000231
+Train Epoch: 9 [12000/28539 (42%)]	Loss: 0.930873	LR: 0.000226
+Train Epoch: 9 [13000/28539 (46%)]	Loss: 0.994942	LR: 0.000221
+Train Epoch: 9 [14000/28539 (49%)]	Loss: 0.841051	LR: 0.000216
+Train Epoch: 9 [15000/28539 (53%)]	Loss: 0.957360	LR: 0.000211
+Train Epoch: 9 [16000/28539 (56%)]	Loss: 0.920467	LR: 0.000206
+Train Epoch: 9 [17000/28539 (60%)]	Loss: 0.875493	LR: 0.000201
+Train Epoch: 9 [18000/28539 (63%)]	Loss: 1.007224	LR: 0.000196
+Train Epoch: 9 [19000/28539 (67%)]	Loss: 1.020413	LR: 0.000191
+Train Epoch: 9 [20000/28539 (70%)]	Loss: 0.796197	LR: 0.000186
+Train Epoch: 9 [21000/28539 (74%)]	Loss: 0.876727	LR: 0.000181
+Train Epoch: 9 [22000/28539 (77%)]	Loss: 0.830338	LR: 0.000175
+Train Epoch: 9 [23000/28539 (81%)]	Loss: 0.652824	LR: 0.000170
+Train Epoch: 9 [24000/28539 (84%)]	Loss: 0.942067	LR: 0.000165
+Train Epoch: 9 [25000/28539 (88%)]	Loss: 0.849488	LR: 0.000160
+Train Epoch: 9 [26000/28539 (91%)]	Loss: 0.739242	LR: 0.000155
+Train Epoch: 9 [27000/28539 (95%)]	Loss: 0.909990	LR: 0.000150
+Train Epoch: 9 [28000/28539 (98%)]	Loss: 0.737968	LR: 0.000145
+
+evaluating...
+Test set: Average loss: 0.6519, Average CER: 0.167604 Average WER: 0.5193
+
+Wed May  5 14:06:46 UTC 2021
+Train Epoch: 10 [0/28539 (0%)]	Loss: 0.755988	LR: 0.000143
+Train Epoch: 10 [1000/28539 (4%)]	Loss: 0.927754	LR: 0.000138
+Train Epoch: 10 [2000/28539 (7%)]	Loss: 1.039641	LR: 0.000133
+Train Epoch: 10 [3000/28539 (11%)]	Loss: 0.727276	LR: 0.000128
+Train Epoch: 10 [4000/28539 (14%)]	Loss: 0.849731	LR: 0.000123
+Train Epoch: 10 [5000/28539 (18%)]	Loss: 0.991496	LR: 0.000118
+Train Epoch: 10 [6000/28539 (21%)]	Loss: 0.702920	LR: 0.000113
+Train Epoch: 10 [7000/28539 (25%)]	Loss: 0.817683	LR: 0.000108
+Train Epoch: 10 [8000/28539 (28%)]	Loss: 0.794908	LR: 0.000103
+Train Epoch: 10 [9000/28539 (32%)]	Loss: 0.760375	LR: 0.000098
+Train Epoch: 10 [10000/28539 (35%)]	Loss: 0.738737	LR: 0.000093
+Train Epoch: 10 [11000/28539 (39%)]	Loss: 0.755684	LR: 0.000088
+Train Epoch: 10 [12000/28539 (42%)]	Loss: 0.771264	LR: 0.000083
+Train Epoch: 10 [13000/28539 (46%)]	Loss: 0.766073	LR: 0.000078
+Train Epoch: 10 [14000/28539 (49%)]	Loss: 0.695790	LR: 0.000073
+Train Epoch: 10 [15000/28539 (53%)]	Loss: 0.893779	LR: 0.000068
+Train Epoch: 10 [16000/28539 (56%)]	Loss: 0.772269	LR: 0.000063
+Train Epoch: 10 [17000/28539 (60%)]	Loss: 0.911496	LR: 0.000058
+Train Epoch: 10 [18000/28539 (63%)]	Loss: 0.811311	LR: 0.000053
+Train Epoch: 10 [19000/28539 (67%)]	Loss: 0.946540	LR: 0.000048
+Train Epoch: 10 [20000/28539 (70%)]	Loss: 0.735728	LR: 0.000043
+Train Epoch: 10 [21000/28539 (74%)]	Loss: 0.706842	LR: 0.000038
+Train Epoch: 10 [22000/28539 (77%)]	Loss: 0.734904	LR: 0.000033
+Train Epoch: 10 [23000/28539 (81%)]	Loss: 0.682482	LR: 0.000028
+Train Epoch: 10 [24000/28539 (84%)]	Loss: 0.807474	LR: 0.000023
+Train Epoch: 10 [25000/28539 (88%)]	Loss: 0.737192	LR: 0.000018
+Train Epoch: 10 [26000/28539 (91%)]	Loss: 0.805803	LR: 0.000013
+Train Epoch: 10 [27000/28539 (95%)]	Loss: 0.795560	LR: 0.000008
+Train Epoch: 10 [28000/28539 (98%)]	Loss: 0.897199	LR: 0.000003
+
+evaluating...
+Test set: Average loss: 0.6239, Average CER: 0.162074 Average WER: 0.5039
